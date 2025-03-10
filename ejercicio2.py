@@ -1,3 +1,4 @@
+#Autor: "Asier Marin Saez"
 """Pide la edad y el nombre por teclado. En caso de ser mayor de 18 años indica que ya puede conducir."""
 
 def main():
