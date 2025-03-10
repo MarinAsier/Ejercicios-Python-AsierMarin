@@ -1,5 +1,5 @@
 # coding=utf-8
-__Author__="José Gaspar Sánchez García"
+__Author__="Asier Marin Saez"
 
 """Escriba un programa que simule el juego **Piedra, papel, tijera** para dos jugadores. Las reglas del juego son las siguientes: 
     Simultáneamente, los dos jugadores muestran una mano en tres posibles posiciones:
@@ -21,11 +21,9 @@ import random
 def quienGana(jugada1, jugada2) :
     if jugada1 == jugada2 :
         return 0
-    elif jugada1 == "piedra" and jugada2 == "tijera" :
-        return 1
-    elif jugada1 == "tijera" and jugada2 == "papel" :
-        return 1
-    elif jugada1 == "papel" and jugada2 == "piedra" :
+    elif (jugada1 == "piedra" and jugada2 == "tijera") or \
+         (jugada1 == "tijera" and jugada2 == "papel") or \
+         (jugada1 == "papel" and jugada2 == "piedra") :
         return 1
     else :
         return 2
@@ -43,12 +41,12 @@ def main():
     empates=0
 
     while numeroTirada > 0 :
-        print("Tirada nº ",numeroTirada,":")
+        print("Tirada nº ", numeroTirada, ":")
         j1 = random.choice(["piedra", "papel", "tijera"])
         j2 = random.choice(["piedra", "papel", "tijera"])
         
-        # print(nombre1+" ha sacado "+j1+".")
-        # print(nombre2+" ha sacado "+j2+".")
+        print("{0} ha sacado: {1}.".format(nombre1,j1))
+        print("{0} ha sacado: {1}.".format(nombre2,j2))
         # Implemente los comentarios anteriores empleando print("".format())
        
         
@@ -73,10 +71,11 @@ def main():
     # Resultado final de todas las tiradas
     if ganadas1 == ganadas2 :
         print("HAN EMPATADO")
-    elif ganadas1 > ganadas2 :
-        print("GANA ",nombre1," (",ganadas1,")")
+   # --> Complete código <--
+    elif ganadas1 > ganadas2:
+        print("GANA " + nombre1 + " con " + str(ganadas1) + " Victorias")
     else :
-        print("GANA ",nombre2," (",ganadas2,")")
+        print("GANA " + nombre2 + " con " + str(ganadas2) + " Victorias")
 
 
 if __name__== "__main__" :
