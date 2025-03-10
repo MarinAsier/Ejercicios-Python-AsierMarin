@@ -1,3 +1,4 @@
+#Autor: "Asier Marin Saez"
 # coding=utf-8
 #Pide la edad y el nombre por teclado. En caso de ser mayor de 18 años indica que ya puede conducir.
 def mayor_edad(e):
