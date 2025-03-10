@@ -1,5 +1,5 @@
 # coding=utf-8
-__Author__="José Gaspar Sánchez García"
+__Author__="Asier Marin Saez"
 
 
 # Función que determina si un numero es primo.
@@ -7,23 +7,19 @@ __Author__="José Gaspar Sánchez García"
 def fibonacci(n) :
     vector = []
 
-    if n<1 :
+    if n < 1 :
         return vector
-    elif n==1 :
-        vector.append(1)
-        return vector
-    elif n >=2 :
-        # Implementa las series de Fibonacci
-        # vector[0]=1
-        # vector[1]=1
+    elif n == 1 :
+        return [1]
 
-        vector.append(1)
-        vector.append(1)
+    vector.append(1)
+    vector.append(1)
         # Creamos aquí el bucle WHILE
-        # --> Implemente el código del Bucle
-    elif n==1 :
-        vector[0]=1
-
+        # --> Implemente el código del Bucle aquí
+    i = 2
+    while i < n :
+        vector.append(vector[i-1] + vector[i-2])
+        i += 1
     return vector; # Retorno de la función
 
 # Programa principal
